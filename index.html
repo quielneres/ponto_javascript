@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>form</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/jquery.datepick.css" rel="stylesheet" type="text/css" media="all" />
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.datepick.pack.js"></script>
+<script language="javascript" type="text/javascript" src="js/javascript.js"></script>
+</head>
+<body>
+<form id="calc" name="calc" method="post" action="">
+  <div class="wrap">
+    <div><img class="2hide" src="images/form_top.jpg" /></div>
+    <div class="container">
+      <div class="left">
+        <div class="right"><img src="images/enter_time.gif" />
+			<div id="msgs">xx</div>
+          <!-- div class="start"><img src="images/starting.gif" />&nbsp;<img 
+		  src="images/ending.gif" /></div -->
+		  <div id="printArea">
+	          <div id="enter_time">
+	            <table cellspacing="0" cellpadding="0" class="lineTarget" align="center">
+	              <tr height="35" valign="middle"><th></th>
+	              <th align="left"><span style="background-color:#456daa">In</span></th>
+	              <th align="left"><span style="background-color:#ccab2a">Out</span></th>
+	              <th align="left"><span style="background-color:#539bed">In</span></th>
+	              <th align="left"><span style="background-color:#df8829">Out</span></th>
+	              </tr>
+	              <tr class="inputLine">
+	                <td><div class="listNum">1</div></td>
+	                <td width="20%" height="32" valign="center">
+	                  <input type="text" class="listfield inputbox yellow_inputbox hour" value="00" maxlength="2" /> :
+	                  <input type="text" class="listfield inputbox yellow_inputbox minute" value="00" maxlength="2" />
+	                </td>
+	                <td width="20%" valign="center">
+	                  <input type="text" class="listfield inputbox yellow_inputbox hour" value="00" maxlength="2" /> :
+	                  <input type="text" class="listfield inputbox yellow_inputbox minute" value="00" maxlength="2" />
+	                </td>
+	                <td width="20%" valign="center">
+	                  <input type="text" class="listfield inputbox yellow_inputbox hour" value="00" maxlength="2" /> :
+	                  <input type="text" class="listfield inputbox yellow_inputbox minute" value="00" maxlength="2" />
+	                </td>
+	                <td width="20%" valign="center">
+	                <input type="text" class="listfield inputbox yellow_inputbox hour" value="00" maxlength="2" /> :
+					<input type="text" class="listfield inputbox yellow_inputbox minute" value="00" maxlength="2" />
+					</td>
+	                <td width="4%">=</td>
+	                <td width="8%"><input type="text" class="listfield inputbox gray_inputbox" value="00:00" readonly="readonly" /></td>
+	              </tr>
+	            </table>
+	          </div>
+	          <div class="rows" align="right"><span rel="7">7 rows</span>&nbsp;&nbsp;</div>
+	          <div class="totals"><img src="images/see-your-totals.gif" /></div>
+	          <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+	            <tr>
+	              <td width="20%" height="35px" align="right"><img src="images/Grand.gif" /></td>
+	              <td width="4%"></td>
+	              <td><input type="text" class="listfield enter gray_inputbox" value="00:00" id="total" name="total" val="0" readonly="readonly" /></td>
+	              <td width="8%">&nbsp;</td>
+	              <td align="right"><img src="images/date.gif" /></td>
+	              <td width="4%"></td>
+	              <td><input type="text" class="listfield enter yellow_inputbox" id="date" name="date" value="" maxlength="8" /></td>
+	              <td width="15%" >&nbsp;</td>
+	              <td align="center"><img src="images/Calculate.gif" style="cursor:pointer;" id="calculate" /></td>
+	              <td align="center"> <img src="images/Clear.gif" style="cursor:pointer" id="clearAll" /></td>
+	              <td align="center"></td>
+                </tr>
+	            <tr>
+	              <td align="right" height="35px"><img src="images/Hourly.gif" /></td>
+	              <td align="center">$</td>
+	              <td><input type="text" class="listfield enter yellow_inputbox" id="rate" name="rate" value="enter here" /></td>
+	              <td>&nbsp;</td>
+	              <td align="right"><img src="images/name.gif" /></td>
+	              <td></td>
+	              <td><input type="text" class="listfield enter yellow_inputbox" name="name" id="name" value="" maxlength="6" /></td>
+	              <td>&nbsp;</td>
+	              <td width="18%" align="center"><img src="images/Print.gif" id="print" style="cursor:pointer"/></td>
+	              <td width="22%" align="center"><img src="images/Email.gif" id="sendEmail" style="cursor:pointer" /></td>
+	              <td width="1%" align="center"></td>
+                </tr>
+	            <tr>
+	              <td align="right"><img class="2hide" src="images/Total.gif" /></td>
+	              <td align="center">$</td>
+	              <td><input type="text" class="listfield enter gray_inputbox" value="0.00" id="totalPay" name="totalPay" val="0" readonly="readonly" /></td>
+	              <td colspan="5"></td>
+	              <td colspan="2"><div>
+	            <div class="support">Supported by<br />
+	              <a href="http://www.calculatehours.com/" target="_blank">calculatehours.com</a></div>
+	          </div></td>
+	              <td></td>
+                </tr>
+	          </table>
+			 </div>
+			 <div id="outBox">
+          <div id="emailBox">
+			  <div style="padding-left: 18px;">Email: <input type="text" name="email" id="email" maxlength="100" /></div>
+			  <div style="padding-left: 18px;">
+				  Captcha: <input id="captcha" type="text" size="5" name="captcha" maxlength="5">
+				  <img id="captchaImg" src="http://www.calculatehours.com/24hour/Time_Calculator/calc/captcha.php" style="vertical-align: bottom;" />
+			  </div>
+			  <div style="display: none;">Comment: <textarea name="comment" id="comment"></textarea></div>
+			  <div class="emailButtons">
+				  <input type="hidden" value="LunchBreak" name="calculator" id="calculator" />
+				  <input type="button" value="Send" class="submitSendEmail" />
+				  <input type="button" value="Cancel" class="cancelSend" />
+			  </div>
+			  <div id="msg"></div>
+		  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div><img src="images/form_bottom.jpg" border="0" /></div>
+  </div>
+</form>
+</body>
+</html>
